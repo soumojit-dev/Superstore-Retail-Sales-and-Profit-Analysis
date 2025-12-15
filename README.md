@@ -1,189 +1,130 @@
-📊 Superstore Retail Sales Analysis
-End-to-End Data Analysis using Python, Pandas, NumPy, and Matplotlib
-📁 Project Overview
+# 📊 Sales Performance Analysis & Business Insights (EDA Project)
 
-This project analyzes a real-world retail sales dataset to uncover insights into sales performance, customer behavior, regional trends, and product-level patterns.
-It demonstrates practical data analytics skills used by Data Analysts, BI Engineers, and Consultants in companies like Deloitte, PwC, Amazon, and Walmart Labs.
+## 📌 Project Overview
 
-The analysis includes:
+This project focuses on **end-to-end exploratory data analysis (EDA)** of a retail sales dataset to uncover **business insights, performance trends, and actionable metrics**.
+Using Python and data visualization techniques, the project analyzes **sales behavior across time, regions, categories, segments, and products** to support data-driven decision-making.
 
-Data cleaning & preprocessing
+The analysis is designed from a **business analytics perspective**, emphasizing **KPIs, trends, and strategic insights** rather than only visual exploration.
 
-KPI computation
+---
 
-Univariate & Categorical analysis
+## 🎯 Objectives
 
-Time-series analysis
+* Understand overall **sales performance** of the business
+* Identify **top-performing categories, regions, segments, and products**
+* Analyze **time-based sales trends**
+* Calculate **key business KPIs**
+* Derive **actionable insights** useful for management and stakeholders
 
-Product-level insights
+---
 
-Visualizations for business decision-making
+## 🗂️ Dataset Description
 
-🎯 Objectives
+* **Records:** 9,800 rows
+* **Features:** 18 columns
 
-Clean and preprocess the dataset for analysis
+### Key Attributes
 
-Understand sales distribution and customer patterns
+* Order details (Order ID, Order Date, Ship Date, Ship Mode)
+* Customer information (Customer ID, Segment, Region)
+* Product information (Category, Sub-Category, Product Name)
+* Sales values (continuous numerical feature)
 
-Identify high-performing and low-performing regions
+📅 **Time Period Covered:** 2015 – 2018
 
-Analyze product category contribution to revenue
+---
 
-Study month-wise sales trends
+## 🛠️ Tools & Technologies Used
 
-Generate data-driven insights for business decisions
+* **Python**
+* **Pandas** – Data cleaning & manipulation
+* **NumPy** – Numerical operations
+* **Matplotlib** – Data visualization
+* **Jupyter Notebook** – Interactive analysis environment
 
-🧰 Tech Stack
+---
 
-Python
+## 🔄 Project Workflow
 
-Pandas
+1. Data Loading & Inspection
+2. Data Cleaning & Preprocessing
 
-NumPy
+   * Date format conversion
+   * Feature engineering (Year, Month, Day)
+   * Duplicate validation
+3. Exploratory Data Analysis (EDA)
 
-Matplotlib
+   * Univariate analysis (Sales distribution)
+   * Categorical analysis (Category, Region, Segment)
+4. KPI Calculation
+5. Time-Series Analysis
+6. Product & Regional Performance Analysis
+7. Business Insights & Conclusions
 
-Seaborn
+---
 
-📂 Dataset
+## 📈 Key Performance Indicators (KPIs)
 
-Dataset Used: Superstore Global Sales Dataset
-Source: Kaggle (Public Retail Dataset)
-Rows: ~10,000+
-Columns: 20+
+| Metric                         | Value     |
+| ------------------------------ | --------- |
+| **Total Sales**                | $2.26M    |
+| **Total Orders**               | 4,922     |
+| **Total Customers**            | 793       |
+| **Total Products**             | 1,861     |
+| **Average Order Value**        | $459.48   |
+| **Average Sales per Customer** | $2,851.87 |
 
-Includes:
+---
 
-Order details
+## 📊 Major Analysis Highlights
 
-Product categories
+### 🔹 Sales Distribution
 
-Sales values
+* Sales distribution is **right-skewed**
+* Majority of orders are low-value with few high-value outliers
+* Median sales are significantly lower than mean sales
 
-Discounts
+### 🔹 Category Performance
 
-Regions
+* **Technology** is the top-performing category (~36.6% of total sales)
+* Furniture and Office Supplies contribute almost equally afterward
 
-Customer segments
+### 🔹 Regional Performance
 
-🔍 Key Steps in the Analysis
-1. Data Loading & Exploration
+* **West region** generates the highest revenue
+* South region shows comparatively lower contribution, indicating growth potential
 
-Checked data types
+### 🔹 Segment Analysis
 
-Identified missing values
+* **Consumer segment** dominates overall sales
+* Corporate and Home Office segments follow
 
-Removed duplicates
+### 🔹 Time-Based Trends
 
-Converted dates to datetime format
+* Steady growth observed after 2016
+* Peak sales recorded during **2017–2018**
+* Average daily sales ≈ **$1,571**
 
-2. Data Cleaning & Feature Engineering
+### 🔹 Product Analysis
 
-Created Year, Month, and YearMonth
+* Identified **Top 10 revenue-generating products**
+* A small number of high-ticket products contribute disproportionately to total revenue
 
-Standardized categories
+---
 
-Converted numeric columns
+## 🧠 Business Insights
 
-3. Business KPIs Computed
+* 📌 Technology products drive maximum revenue → focus on inventory & marketing
+* 📌 West & East regions outperform others → expansion opportunities
+* 📌 Premium products significantly impact overall sales → strategic pricing matters
+* 📌 Time-based patterns can support forecasting & operational planning
 
-Total Sales
+---
 
-Total Orders
+## 👤 Author
 
-Total Customers
-
-Average Order Value (AOV)
-
-Average Monthly Sales
-
-Top-selling products & categories
-
-4. Visualizations Built
-
-Sales by Category (Bar Chart)
-
-Profit by Region (Bar Chart)
-
-Customer Segment Share (Pie Chart)
-
-Monthly Sales Trend (Line Chart)
-
-Profit vs Discount (Scatter Plot)
-
-(Images can be stored inside a /plots directory)
-
-📊 Visual Insights
-
-Some notable insights generated from the analysis:
-
-Technology category achieved the highest sales among all product categories.
-
-West region dominated overall sales performance, followed by East.
-
-Consumer segment accounted for the largest share of customer orders.
-
-Sales show clear seasonal trends, with noticeable peaks in certain months.
-
-Higher discounts negatively impacted profits, especially in specific subcategories.
-
-🚀 Business Recommendations
-
-Increase marketing focus in high-performing regions like West and East.
-
-Reduce discounting in low-profit product categories.
-
-Expand product lines in top subcategories such as Phones and Chairs.
-
-Improve supply chain and pricing strategies for Central and South regions.
-
-Use customer segmentation to tailor promotions for Corporate and Consumer segments.
-
-📁 Project Structure
-Superstore-Analysis/
-│
-├── superstore_analysis.ipynb        # Main analysis notebook
-├── superstore_visualizations.py      # Python script for plots
-├── Superstore.csv                    # Dataset (not uploaded if large)
-│
-└── plots/                            # Saved images
-    ├── sales_by_category.png
-    ├── profit_by_region.png
-    ├── customer_segment_share.png
-    ├── monthly_sales_trend.png
-    └── profit_vs_discount.png
-
-🧠 Skills Demonstrated
-
-Data Cleaning & Preparation
-
-Exploratory Data Analysis (EDA)
-
-Feature Engineering
-
-KPI Computation
-
-Business Insight Generation
-
-Data Visualization
-
-Storytelling with Data
-
-💡 Future Improvements
-
-Build a forecasting model (ARIMA / Prophet)
-
-Create a Power BI or Tableau dashboard
-
-Perform customer segmentation (K-Means)
-
-Build a profit optimization model
-
-📜 Author
-
-Soumojit Maitra
-B.Tech CSE (AI & ML) | Data Science & AI Enthusiast
-📍 Brainware University
-🔗 LinkedIn: https://www.linkedin.com/in/soumojitmaitra/
-
-🔗 GitHub: https://github.com/soumojit-dev
+**Soumojit Maitra**
+Data Science & AI Enthusiast
+B.Tech CSE (AI & ML)
+Brainware University
